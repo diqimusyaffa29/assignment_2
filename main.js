@@ -62,13 +62,14 @@ function showData() {
 
 }
 
+
+
 // Loads All data from local storage when document or page loaded
 document.onload = showData();
 
 
 // function to add data to local storage
 function addData() {
-    // if form is validate
     if (validateForm() == true) {
         let name = document.getElementById("name").value;
         let age = document.getElementById("age").value;
@@ -79,7 +80,7 @@ function addData() {
         if (localStorage.getItem("peopleList") == null) {
             peopleList = [];
         } else {
-            peopleList = JSON.parse(localStorage.getItem("peopleLlist"));
+            peopleList = JSON.parse(localStorage.getItem("peopleList"));
         }
 
         peopleList.push({
